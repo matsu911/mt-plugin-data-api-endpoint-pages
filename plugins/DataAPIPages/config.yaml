@@ -1,0 +1,16 @@
+id: DataAPIPages
+name: DataAPIPages
+version: 0.1
+description: Data API plugin to handle pages
+author_name: Shigeaki Matsumura
+author_link: http://backflip180.jp
+
+applications:
+  data_api:
+    endpoints:
+      - id: list_pages
+        route: /sites/:site_id/pages
+        verb: GET
+        version: 1
+        handler: DataAPIPages::Endpoint::Page::list
+        requires_login: 1
